@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Note Down</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box-form">
+            <form>    
+                <h3>Title : </h3>
+                <input required type="text" placeholder="Enter title..." class="form-input title-input" />
+                <h3>Full Name : </h3>
+                <input required type="text" placeholder="Enter auther name..." class="form-input author-input"/>
+                <h3>Date : </h3>
+                <input required type="date" class="form-input date-input" style="color: #999;"/>
+                <h3>Discription : </h3>
+                <input required type="text" placeholder="Enter small discription.." class="form-input description-input" />
+                <h3>Category : </h3>
+                <div class="category">
+                    <label for="emergency" class="emergency">
+                        <input type="radio" id="emergency" name="category" value="emergency" > Emergency
+                    </label>
+                    <label for="important" class="important">
+                        <input type="radio" id="important" name="category" value="important" > Important
+                    </label>
+                    <label for="urgent" class="urgent">
+                        <input type="radio" id="urgent" name="category" value="urgent" > Urgent
+                    </label>
+                    <label for="norush" class="norush">
+                        <input type="radio" id="norush" name="category" value="norush" > No Rush
+                    </label>
+                </div>
+                <button type="submit" class="create">Create Note</button>
+                <button type="button" class="close">Close</button>
+            </form>
+        </div>
+        <div class="box">
+            <div class="left-buttons">
+                <button class="add"><i class="fa-solid fa-plus"></i></button>
+                <button class="up"><i class="fa-solid fa-angle-up"></i></button>
+                <button class="down"><i class="fa-solid fa-angle-down"></i></button>
+            </div>
+            <div class="card">
+                <div class="cards one">
+                    <div class="count">0</div>
+                    <h2 class="title-text left">Title</h2>
+                    <h3 class="name-text left">Name</h3>
+                    <p class="date-text left" style="margin: 6px 0px;">Date</p>
+                    <p class="discription-text left" >Discription</p>
+                </div>
+                <div class="cards two"></div>
+                <div class="cards three"></div>
+            </div>
+            <div class="right-buttons">
+                <button class="all-button right"></button>
+                <button class="emergency-button right"></button>
+                <button class="important-button right"></button>
+                <button class="urgent-button right"></button>
+                <button class="norush-button right"></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

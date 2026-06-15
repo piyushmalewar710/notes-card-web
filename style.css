@@ -1,0 +1,296 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #222;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-form{
+    position:absolute;
+    background-color: #1a1919;
+    z-index: 3;
+    border: 0.5px solid #999;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 13px;
+    width: 500px;
+    color: #999;
+    color: white;
+    display: none;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    margin: 12px 0px;
+}
+.form-input{
+    padding: 14px 12px;
+    border-radius: 21px;
+    width: 90%;
+    border: none;
+    background-color: #131212;
+    color: #999;
+    font-size: 14px;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+}
+.category{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category label{
+    padding: 10px 7px;
+    gap: 10px;
+    margin: 6px 3px;
+    border-radius: 21px;
+    width: 130px;
+    color: white;
+}
+.category input[type="radio"]{
+    width: auto;
+}
+.emergency{
+    border: 2px solid rgb(255, 17, 0);
+    background-color: rgb(255, 17, 0, 0.1);
+    cursor: pointer;
+}
+.important{
+    border: 2px solid rgb(255, 166, 0);
+    background-color: rgb(255, 166, 0, 0.1);
+    cursor: pointer;
+}
+.urgent{
+    border: 2px solid rgb(255, 247, 0);
+    background-color: rgb(255, 247, 0, 0.1);
+    cursor: pointer;
+}
+.norush{
+    border: 2px solid rgb(98, 255, 0);
+    background-color: rgb(98, 255, 0, 0.1);
+    cursor: pointer;
+}
+button{
+    width: 100%;
+    border-radius: 23px;
+    padding: 14px 12px;
+    margin: 6px 0px;
+    font-size: large;
+    font-weight: 500;
+}
+.create{
+    background-color: #111010;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.close{
+    background-color: #ff000046;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+.card{
+    position: relative;
+    min-width: 380px;
+    height: 300px;
+    color: #ffffff;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards{
+    /* width: 400px; */
+    min-height: 300px;
+    border: 2px solid #999;
+    position: relative;
+}
+.one{
+    background-color: rgb(17, 17, 17);
+    border: 1px solid #999;
+    width: 380px;
+    border-radius: 9px;
+    z-index: 2;
+    padding: 14px 12px; 
+    gap: 10px;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+    position: relative;
+}
+.count{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 10px;
+    background-color: #222222b1;
+}
+.two{
+    background-color: rgb(17, 17, 17);
+    border: 1px solid #999;
+    border-radius: 9px;
+    padding: 14px 12px; 
+    width: 370px;
+    /* left: 5px; */
+    bottom: 320px;
+    border-top: none;
+    z-index: 1;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.three{
+    background-color: rgb(17, 17, 17);
+    border: 1px solid #999;
+    border-radius: 9px;
+    padding: 14px 12px;
+    width: 360px;
+    /* left: 10px; */
+    bottom: 640px;
+    z-index: 0;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.right-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+.left-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+@media(max-width: 650px){
+    .box{
+        flex-direction: column;
+    }
+    .left-buttons , .right-buttons {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .right-buttons{
+        margin-top: 50px;
+    }
+    .cards{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media(max-width: 400px){
+    .box{
+        flex-direction: column;
+    }
+    .left-buttons , .right-buttons {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .cards{
+        width: 250px;
+        height: 250px;
+    }
+    .card{
+        width: 300px;
+        height: 300px;
+    }
+}
+.all-button{
+    background-color: rgba(116, 108, 108, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.emergency-button{
+    background-color: rgb(255, 17, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.important-button{
+    background-color: rgb(255, 166, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.urgent-button{
+    background-color: rgb(255, 247, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.norush-button{
+    background-color: rgb(98, 255, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.add{
+    /* color: #999; */
+    color: #ffffff;
+    background-color: #131212;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.up{
+    /* color: #999; */
+    color: #ffffff;
+    background-color: #131212;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
+.down{
+    /* color: #999; */
+    color: #ffffff;
+    background-color: #131212;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgb(79, 60, 60);
+}
